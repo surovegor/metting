@@ -1,6 +1,6 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss  = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
@@ -10,7 +10,7 @@ const del = require('del');
 
 function browsersync() {
     browserSync.init({
-        server : {
+        server: {
             baseDir: 'app/'
         }
     });
@@ -22,23 +22,23 @@ function cleanBuild() {
 
 function images() {
     return src('app/images/src/**/*')
-    .pipe(imagemin())
-    .pipe(dest('app/images/dest/'))
+        .pipe(imagemin())
+        .pipe(dest('app/images/dest/'))
 }
 
 function scripts() {
     return src([
         'app/js/main.js'
     ])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest('app/js'))
-    .pipe(browserSync.stream())
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream())
 }
 
 function styles() {
-    return src('app/scss/style.scss')
-        .pipe(scss({outputStyle: 'compressed'}))
+    return src('app/sass/style.sass')
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
@@ -49,23 +49,23 @@ function styles() {
 }
 function build() {
     return src([
-       'app/css/**/*.min.css',
-       'app/js/**/*.min.js',
-       'app/images/dest/**/*',
-       'app/**/*.html',
-   ], {base: 'app'})
-   .pipe(dest('build'));
+        'app/css/**/*.min.css',
+        'app/js/**/*.min.js',
+        'app/images/dest/**/*',
+        'app/**/*.html',
+    ], { base: 'app' })
+        .pipe(dest('build'));
 }
 
 function watching() {
-    watch(['app/scss/**/*.scss'], styles);
+    watch(['app/sass/**/*.sass'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/*.html']).on('change', browserSync.reload);
     watch('app/images/src/**/*', images);
 }
 
 exports.styles = styles;
-exports.watching = watching; 
+exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
