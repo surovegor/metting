@@ -27,7 +27,11 @@ a
   text-decoration: none
   color: inherit
 
-header
+button
+  cursor: pointer
+  border: none
+
+.header
   display: flex
   justify-content: flex-start
   max-width: 1416px
@@ -103,8 +107,6 @@ header
   background-color: $navy-blue
   font-weight: 500
   font-size: 17px
-  border: none
-  cursor: pointer
 
 .header__button:hover
   background-color: $blue
@@ -249,9 +251,7 @@ header
   font-weight: 500
   font-size: 17px
   padding: 22px 38px
-  border: none
   color: $navy-blue
-  cursor: pointer
 
 .start__button:hover
   background: #5bffec
@@ -259,6 +259,7 @@ header
 
 .start__img
   margin-top: 52px
+  max-width: 607px
 
 @media (max-width: 1022px)
   .start__title
@@ -398,7 +399,7 @@ header
 .details__description
   font-size: 16px
   line-height: 26px
-  opacity: 0.6
+  opacity: 0.8
   margin-bottom: 30px
 
 .details__link
@@ -477,8 +478,6 @@ header
   font-size: 17px
   color: #fff
   padding: 16px 28px
-  border: none
-  cursor: pointer
 
 @media (max-width: 1000px)
   .integrate__img
