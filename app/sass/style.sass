@@ -472,12 +472,16 @@ button
   margin: 15px 0 40px
 
 .integrate__button
-  background: #005FEC
+  background: $blue
   border-radius: 6px
   font-weight: 500
   font-size: 17px
   color: #fff
   padding: 16px 28px
+
+.integrate__button:hover
+  background: #2d1eff
+  transition: .3s
 
 @media (max-width: 1000px)
   .integrate__img
@@ -489,3 +493,64 @@ button
 
   .integrate
     height: 400px
+
+.communication
+  max-width: 1120px
+  padding: 130px 8px 0 8px
+
+.communication__block
+  display: flex
+  justify-content: space-between
+
+.communication__title
+  font-weight: 600
+  font-size: 36px
+  line-height: 48px
+  max-width: 496px
+
+.communication__description
+  font-size: 16px
+  line-height: 30px
+  max-width: 446px
+  margin: 16px 0 30px
+
+.point
+  display: flex
+
+.communication__point
+  margin-bottom: 25px
+
+.point__info
+  font-weight: 500
+  font-size: 18px
+  line-height: 18px
+  margin-left: 16px
+
+.communication__button
+  font-size: 16px
+  line-height: 26px
+  color: #fff
+  background: $blue
+  border-radius: 6px
+  padding: 14px 26px
+  margin-top: 25px
+
+.communication__button:hover
+  background: #2d1eff
+  transition: .3s
+
+.communication__image
+  object-fit: cover
+
+@media (max-width: 810px)
+  .communication__image
+    display: none
+
+  .communication
+    padding-top: 60px
+
+  .communication__block
+    justify-content: center
+
+  .communication__content
+    text-align: center

@@ -22,7 +22,9 @@ function cleanBuild() {
 
 function images() {
     return src('app/images/src/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin({
+            progressive: true 
+        }))
         .pipe(dest('app/images/dest/'))
 }
 
