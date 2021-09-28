@@ -11,7 +11,7 @@ body
   color: #18216D
   text-rendering: optimizeSpeed
   scroll-behavior: smooth
-  height: 3000px
+  height: 5000px
 
 *,
 *::before,
@@ -554,3 +554,136 @@ button
 
   .communication__content
     text-align: center
+
+.price
+  max-width: 1120px
+  text-align: center
+  padding-top: 120px
+
+.price__title
+  letter-spacing: -1px
+  font-weight: 600
+  font-size: 48px
+  line-height: 64px
+
+.price__description
+  font-size: 16px
+  line-height: 30px
+  margin: 20px 0 40px
+
+.price__range
+  background: rgba(0,95,236, 0.1)
+  border-radius: 6px
+  width: 272px
+  height: 60px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 6px
+  margin: 0 auto
+
+.price__button
+  font-weight: 500
+  font-size: 17px
+  color: $navy-blue
+  display: block
+  width: 135px
+  height: 48px
+  background: none
+
+.price__button_active
+  color: #005FEC
+  background-color: #fff
+  border-radius: 6px
+
+.price__block
+  display: flex
+  justify-content: space-between
+  margin-top: 80px
+  padding: 0 8px
+
+.card__title
+  font-weight: 600
+  font-size: 24px
+  line-height: 48px
+
+.card__price
+  font-weight: 600
+  font-size: 36px
+  display: none
+
+.card__price_static
+  font-weight: 600
+  font-size: 36px
+
+.card__price_active
+  display: block
+
+.card__item
+  font-size: 17px
+  margin-bottom: 17px
+  display: flex
+
+.card__button
+  background: rgba(0,95,236, 0.1)
+  font-size: 16px
+  padding: 16px 36px
+  border-radius: 6px
+  margin-top: 20px
+
+.card__button:hover
+  background: $blue
+  color: #fff
+  transition: .3s
+
+.card__img
+  display: block
+  margin-right: 12px
+
+.card
+  border: 1px solid rgba(35,38,41, .2)
+  border-radius: 10px
+  margin-right: 4px
+
+.card__header
+  border-bottom: 1px solid rgba(35,38,41, .2)
+  padding: 22px 41px
+  text-align: start
+
+.card__body
+  padding: 40px 41px 60px 41px
+
+.card__text_special
+  opacity: 0.5
+
+.card__rate
+  color: #7a7a7a
+
+.card__text
+  text-align: start
+
+@media (max-width: 750px)
+  .price__block
+    flex-direction: column
+    margin-top: 20px
+
+  .card
+    margin: 0 0 10px
+    border-radius: 0
+
+  .card__header
+    padding: 11px 20px
+    text-align: center
+
+  .card__body
+    padding: 20px 21px 15px 21px
+
+  .card__item
+    margin-bottom: 10px
+
+  .card__list
+    max-width: 250px
+    margin: 0 auto
+
+  .price__title
+    font-size: 36px
