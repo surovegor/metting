@@ -11,7 +11,6 @@ body
   color: #18216D
   text-rendering: optimizeSpeed
   scroll-behavior: smooth
-  height: 5000px
 
 *,
 *::before,
@@ -687,3 +686,128 @@ button
 
   .price__title
     font-size: 36px
+
+@media (max-width: 285px)
+  .price__range
+    width: 200px
+
+.testimonial
+  background: #FAFAFA
+  margin-top: 130px
+  padding: 100px 8px
+
+.testimonial__block
+  max-width: 1120px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+
+.testimonial__title
+  font-weight: 600
+  font-size: 48px
+  line-height: 48px
+
+.testimonial__description
+  font-weight: 500
+  font-size: 24px
+  font-style: italic
+  line-height: 44px
+  opacity: 0.9
+  padding: 55px 0 33px
+
+.testimonial__author
+  font-weight: 500
+  font-size: 26px
+  line-height: 26px
+
+.testimonial__position
+  font-size: 16px
+  line-height: 26px
+  opacity: 0.6
+  display: block
+  margin-top: 6px
+
+.testimonial__content
+  max-width: 616px
+
+@media (max-width: 810px)
+  .testimonial__img
+    display: none
+
+  .testimonial__block
+    text-align: center
+
+.testimonial__title
+  font-size: 38px
+
+.testimonial__description
+  font-size: 20px
+
+.testimonial
+  margin-top: 50px
+  padding: 50px 8px
+
+.footer
+  max-width: 1120px
+  padding-top: 120px
+
+.footer__block
+  display: flex
+  justify-content: space-between
+  padding-bottom: 60px
+  padding: 0 8px
+  margin-bottom: 50px
+
+.footer__discription
+  font-size: 16px
+  line-height: 26px
+  margin: 20px 0
+  max-width: 250px
+
+.footer__title
+  font-weight: 600
+  font-size: 22px
+  line-height: 26px
+  margin-bottom: 31px
+
+.footer__link
+  font-size: 16px
+  line-height: 40px
+
+.footer__link:hover
+  color: $blue
+
+.footer__contact
+  display: block
+  line-height: 40px
+
+.footer__copyright
+  padding: 30px 0 30px
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  opacity: .8
+  border-top: 1px solid rgba(24,33,109, 0.2)
+
+.footer__company, .footer__menu
+  margin-right: 16px
+
+@media (max-width: 630px)
+  .footer__block
+    flex-direction: column
+
+  .footer__menu
+    text-align: center
+    margin-top: 30px
+
+  .footer__company
+    text-align: center
+
+  .footer__discription
+    max-width: 100%
+
+  .footer .brand
+    margin: 0 auto
+
+  .footer
+    padding-top: 50px

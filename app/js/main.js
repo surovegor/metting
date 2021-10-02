@@ -7,7 +7,7 @@ menuButton.addEventListener("click", () => {
     hamburger.classList.toggle("animate");
     menu.classList.toggle("header__menu-visible");
     service.classList.toggle("header__service-visible");
-})
+});
 
 const priceButton = document.querySelectorAll(".price__button");
      
@@ -20,7 +20,7 @@ priceButton.forEach((btn) => {
 
         if(!btn.classList.contains("price__button_active")) {
             priceButton.forEach(item => item.classList.remove("price__button_active"));
-            btn.classList.add("price__button_active")
+            btn.classList.add("price__button_active");
 
             cardPriceAll.forEach((card) => card.classList.remove("card__price_active"));
             cardPrice.forEach((card) => card.classList.add("card__price_active"));
